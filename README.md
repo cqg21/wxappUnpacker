@@ -20,19 +20,19 @@ node wuWxapkg.js <wx_mini_progranm_file_path>
 ```
 1. Module build failed: Error: Cannot find module 'escodegen'（本项目已经修复该问题）
 ```
-### 解决方法：
+#### 解决方法：
 ```
 npm i escodegen -S
 ```
 ```
 2. Error: This Package is unrecognizable, please decrypted every type of file by hand.
 ```
-### 解决办法：虽然微信小程序的包后缀是.wxapkg，但有一些包的依赖后缀也是.wxapkg，真正的小程序包大小1M左右，而依赖包大小2、3M甚至更多。所以一股脑的反编译.wxapkg 类型的文件可能会报错，遇见这个问题的小伙伴请自知，你可能没找对包哦
+#### 解决办法：虽然微信小程序的包后缀是.wxapkg，但有一些包的依赖后缀也是.wxapkg，真正的小程序包大小1M左右，而依赖包大小2、3M甚至更多。所以一股脑的反编译.wxapkg 类型的文件可能会报错，遇见这个问题的小伙伴请自知，你可能没找对包哦
 
 ```
 3. _vd_version_info__ is not defined （本项目已经修复该问题）
 ```
-### 解决办法： 修改反编译目录下的wuWxss.js文件,修改RunVm方法为
+#### 解决办法： 修改反编译目录下的wuWxss.js文件,修改RunVm方法为
 
 ```
 function runVM(name,code){
